@@ -71,7 +71,7 @@ CMD echo -n > $TEST_LOG_FILE && \
     -JsendDataWaitTime=$SEND_DATA_WAIT_TIME \
     -JsendDataReadTimeout=$SEND_DATA_READ_TIMEOUT \
     -JcloseConnectionWaitTime=$CLOSE_CONNECTION_WAIT_TIME \
-    -JcloseConnectionReadTimeout=$CLOSE_CONNECTION_READ_TIMEOUT \
+    -JcloseConnectionReadTimeout=$CLOSE_CONNECTION_READ_TIMEOUT  && \
     echo -e "\n\n===== TEST LOGS =====\n\n" && \
     cat $TEST_LOG_FILE && \
     echo -e "\n\n===== TEST RESULTS =====\n\n" && \
