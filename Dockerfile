@@ -55,15 +55,13 @@ CMD echo -n > $TEST_LOG_FILE && \
     -t=$TEST_SCRIPT_FILE \
     -j=$TEST_LOG_FILE \
     -l=$TEST_RESULTS_FILE \
-   # -Djavax.net.ssl.keyStore=$KEYSTORE_FILE \
-    -Djavax.net.ssl.keyStorePassword=$KEYSTORE_PASSWORD \
+	-Djavax.net.ssl.keyStorePassword=$KEYSTORE_PASSWORD \
     -Jhttps.use.cached.ssl.context=$USE_CACHED_SSL_CONTEXT \
     -Jjmeter.save.saveservice.output_format=xml \
     -Jjmeter.save.saveservice.response_data=true \
     -Jjmeter.save.saveservice.samplerData=true \
     -JnumberOfThreads=$NUMBER_OF_THREADS \
     -JrampUpTime=$RAMP_UP_TIME \
-  #  -JcertFile=$CERTIFICATES_FILE \
     -Jhost=$HOST \
     -Jport=$PORT \
     -JopenConnectionWaitTime=$OPEN_CONNECTION_WAIT_TIME \
@@ -76,7 +74,6 @@ CMD echo -n > $TEST_LOG_FILE && \
     -JsendDataReadTimeout=$SEND_DATA_READ_TIMEOUT \
     -JcloseConnectionWaitTime=$CLOSE_CONNECTION_WAIT_TIME \
     -JcloseConnectionReadTimeout=$CLOSE_CONNECTION_READ_TIMEOUT \
-
     echo -e "\n\n===== TEST LOGS =====\n\n" && \
     cat $TEST_LOG_FILE && \
     echo -e "\n\n===== TEST RESULTS =====\n\n" && \
